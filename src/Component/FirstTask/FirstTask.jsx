@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const FirstTask = () => {
+
   const [tasks, setTasks] = useState([]);
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Active");
@@ -25,11 +26,11 @@ const FirstTask = () => {
       <form onSubmit={handleSubmit} className="mb-4">
         <label className="form-control w-full max-w-xs">
           <div className="label">
-            <span className="label-text font-bold mb-1">Name:</span>
+            <span className="label-text font-bold mb-1">Order Name:</span>
           </div>
           <input
             type="text"
-            placeholder="Type here"
+            placeholder="Type here Order Name"
             className="input input-bordered w-full max-w-xs"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -44,9 +45,10 @@ const FirstTask = () => {
             onChange={(e) => setStatus(e.target.value)}
           >
             <option disabled selected>
-              Pick your favorite Simpson
+              Select your option
             </option>
             <option>Complete</option>
+            <option>Pending</option>
             <option>Active</option>
             <option>All</option>
           </select>
@@ -59,7 +61,7 @@ const FirstTask = () => {
           <input
             type="file"
             className="file-input file-input-bordered w-full max-w-xs"
-            accept=".pdf, .doc, .docx"
+            accept=".pdf, .doc, .docx,.png"
             onChange={(e) => handleFileChange(e)}
           />
 
