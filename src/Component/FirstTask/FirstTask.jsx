@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SecondTask from "../SecondTask/SecondTask";
 
 const FirstTask = () => {
 
@@ -22,7 +23,7 @@ const FirstTask = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8">
+    <div className="container  m-10">
       <form onSubmit={handleSubmit} className="mb-4">
         <label className="form-control w-full max-w-xs">
           <div className="label">
@@ -68,7 +69,7 @@ const FirstTask = () => {
         </label>
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 md:ml-[-1120px] mt-3"
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 mt-3"
         >
           Submit
         </button>
@@ -91,6 +92,9 @@ const FirstTask = () => {
           ))}
         </tbody>
       </table>
+      <div className="mt-10">
+        <SecondTask></SecondTask>
+      </div>
     </div>
   );
 };

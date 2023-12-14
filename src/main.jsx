@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
 import './index.css'
 import FirstTask from './Component/FirstTask/FirstTask.jsx'
+import SecondTask from './Component/SecondTask/SecondTask.jsx'
 
 const router = createBrowserRouter([
   {
