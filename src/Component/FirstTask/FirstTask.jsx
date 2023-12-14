@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SecondTask from "../SecondTask/SecondTask";
 
 const FirstTask = () => {
-
   const [tasks, setTasks] = useState([]);
   const [name, setName] = useState("");
   const [status, setStatus] = useState("Active");
@@ -65,7 +64,6 @@ const FirstTask = () => {
             accept=".pdf, .doc, .docx,.png"
             onChange={(e) => handleFileChange(e)}
           />
-
         </label>
         <button
           type="submit"
@@ -74,7 +72,6 @@ const FirstTask = () => {
           Submit
         </button>
       </form>
-
 
       <table className="table w-full">
         <thead>

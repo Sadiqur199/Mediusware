@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const SecondTask = () => {
   const [allContacts, setAllContacts] = useState([]);
@@ -9,16 +9,20 @@ const SecondTask = () => {
   const [showContactDetailsModal, setShowContactDetailsModal] = useState(false);
   const [selectedContact, setSelectedContact] = useState(null);
   const [onlyEven, setOnlyEven] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    axios.get('https://contact.mediusware.com/api/contacts').then((response) => {
-      setAllContacts(response.data);
-    });
+    axios
+      .get("https://contact.mediusware.com/api/contacts")
+      .then((response) => {
+        setAllContacts(response.data);
+      });
 
-    axios.get('https://contact.mediusware.com/api/country-contacts/bangladesh').then((response) => {
-      setUsContacts(response.data);
-    });
+    axios
+      .get("https://contact.mediusware.com/api/country-contacts/bangladesh")
+      .then((response) => {
+        setUsContacts(response.data);
+      });
   }, []);
 
   const handleContactClick = (contact) => {
@@ -32,7 +36,7 @@ const SecondTask = () => {
 
   const filterContacts = (contacts) => {
     return contacts
-      .filter((contact) => (!onlyEven || contact.id % 2 === 0))
+      .filter((contact) => !onlyEven || contact.id % 2 === 0)
       .filter(
         (contact) =>
           contact.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
