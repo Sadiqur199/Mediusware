@@ -16,7 +16,7 @@ const SecondTask = () => {
       setAllContacts(response.data);
     });
 
-    axios.get('https://contact.mediusware.com/api/contacts').then((response) => {
+    axios.get('https://contact.mediusware.com/api/country-contacts/bangladesh').then((response) => {
       setUsContacts(response.data);
     });
   }, []);
